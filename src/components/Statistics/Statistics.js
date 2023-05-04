@@ -10,7 +10,7 @@ export const Statistics = ({
     <>
       {options.map((name, i) => {
         return (
-          <StatisticsText key={i}>
+          <StatisticsText key={i+1} categoryName={name}>
             {name}: <span>{statistic[name]}</span>
           </StatisticsText>
         );
@@ -18,7 +18,7 @@ export const Statistics = ({
       <StatisticsText>
         Total: <span>{total}</span>
       </StatisticsText>
-      <StatisticsText>
+      <StatisticsText categoryName={'good'}>
         Positive feedback: <span>{positivePercentage()}</span>%
       </StatisticsText>
     </>

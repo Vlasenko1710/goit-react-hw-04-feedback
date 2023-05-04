@@ -3,14 +3,9 @@ import { Wrap, Button } from './FeedbackOptions.styled';
 export const FeedbackOptions = ({ onLeavefeedback, options }) => {
   return (
     <Wrap>
-      {options.map((name, i) => {
+      {options.map(name => {
         return (
-          <Button
-            key={i + 1}
-            onClick={() => {
-              onLeavefeedback(name);
-            }}
-          >
+          <Button key={name} onClick={() => onLeavefeedback(name)}>
             {name}
           </Button>
         );
